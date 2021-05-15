@@ -1,4 +1,4 @@
-const { BUY_CAKE } = require('../actions/Types')
+const { BUY_CAKE, BUY_ICECREAM } = require('../actions/Types')
 
 // state object will bind to the orginal initial state object
 // action object will bind to the dispatch object
@@ -10,16 +10,20 @@ const { BUY_CAKE } = require('../actions/Types')
 
 // must return the same exact structure of the start object
 
-const initialState = {
+const initialCakeState = {
     numOfCakes: 10
 }
 
-const cakeReducer = (state = initialState, action) => {
+const initialIceCreamState = {
+    numOfIceCreams: 20
+}
+
+const cakeReducer = (state = initialCakeState, action) => {
     switch (action.type) {
         case BUY_CAKE:
             return {
                 ...state,
-                numofCakes: state.numOfCakes - 1
+                numOfCakes: state.numOfCakes - 1
             }
         default: 
             return state
@@ -27,6 +31,20 @@ const cakeReducer = (state = initialState, action) => {
     }    
 }
 
+// could put this in another file to
+const iceCreamReducer = (state = initialIceCreamState, action) => {
+    switch (action.type) {
+        case BUY_ICECREAM:
+            return {
+                ...state,
+                numOfIceCreams: state.numOfIceCreams - 1
+            }
+        default:
+            return state
+    }
+}
+
 module.exports = {
-    cakeReducer
+    cakeReducer,
+    iceCreamReducer 
 }
