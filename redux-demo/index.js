@@ -1,9 +1,8 @@
-const redux = require('redux');
-const createStore = redux.createStore;
-const combineReducers = redux.combineReducers
-const applyMiddleware = redux.applyMiddleware;
-const reduxLogger = require('redux-logger');
-const logger = reduxLogger.createLogger();
+const { createStore, 
+        combineReducers, 
+        applyMiddleware } = require('redux')
+const { createLogger } = require('redux-logger');
+const logger = createLogger();  
 
 const { buyCake, buyIceCream } = require('./actions/CakeAction')
 const { cakeReducer, iceCreamReducer } = require('./reducers/CakeReducers')
