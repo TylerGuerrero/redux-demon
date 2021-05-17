@@ -4,7 +4,7 @@
 // actions are the only way to update the store and
 // change the global state management system
 
-import { BUY_CAKE } from './CakeTypes'
+import { BUY_CAKE } from './Types'
 
 export const buyCake = () => {
     return {

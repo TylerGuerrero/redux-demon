@@ -11,10 +11,10 @@
 // must return the same type and structure of 
 // the state you had before
 
-import { BUY_CAKE } from '../actions/CakeTypes'
+import { BUY_CAKE } from '../actions/Types'
 
 const initialState = {
-    numOfCake: 10    
+    numOfCakes: 10    
 }
 
 export const cakeReducer = (state = initialState, action) => {
@@ -22,7 +22,7 @@ export const cakeReducer = (state = initialState, action) => {
         case BUY_CAKE:
             return {
                 ...state,
-                numOfCake: state.numOfCake - 1
+                numOfCakes: state.numOfCakes - 1
             }
         default:
             return state;
