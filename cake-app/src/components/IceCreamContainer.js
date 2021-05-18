@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { buyIceCream } from '../redux/actions/IceCreamActions'
+import { buyIceCream } from '../redux/icecream/actions/iceCreamActions'
 
 
 const IceCreamContainer = ({numOfIceCreams, buyIceCream}) => {

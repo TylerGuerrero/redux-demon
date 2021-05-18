@@ -4,11 +4,11 @@
 // actions are the only way to update the store and
 // change the global state management system
 
-import { BUY_CAKE } from './Types'
+import { BUY_CAKE } from '../cakeTypes'
 
-export const buyCake = () => {
+export const buyCake = (number = 1) => {
     return {
         type: BUY_CAKE,
-        payload: ''
+        payload: number
     }
 }

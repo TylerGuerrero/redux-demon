@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { buyCake } from '../redux/actions/CakeActions'
+import { buyCake } from '../redux/cake/actions/cakeActions'
 
 const HooksCakeContainer = () => {
     // useSelector is the same as mapStateToProps
